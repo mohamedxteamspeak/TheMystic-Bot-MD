@@ -204,7 +204,7 @@ let str = `
 ° ඬ⃟🖍️ _${usedPrefix}pixelar_
 ° ඬ⃟🖍️ _${usedPrefix}blur_
 
-*<𝔽𝕣𝕒𝕤𝕖𝕤/>*
+*<𝔽ℝ𝔸𝕊𝔼𝕊/>*
 
 ° ඬ⃟🥀 _${usedPrefix}consejo_
 ° ඬ⃟🥀 _${usedPrefix}fraseromantica_
