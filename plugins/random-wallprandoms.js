@@ -88,6 +88,6 @@ conn.sendButton(m.chat, `_${command}_`.trim(), `*◈${name}*`, haha.data, [['�
 handler.command = handler.help = ['wpmontaña', 'pubg', 'wpgaming', 'wpaesthetic', 'wprandom', 'coffee', 'pentol', 'caricatura', 'ciberespacio', 'technology', 'doraemon', 'hacker', 'planeta', 'randomprofile', 'wpaesthetic2', 'wpvehiculo', 'wallhp', 'wpmoto']
 handler.tags = ['img']
 handler.limit = false
-handler.register = true
+handler.register = false
 export default handler
 global.keysxxx = ['fiktod', 'c2459db922', 'BF39D349845E', '675e34de8a', '37CC845916', '0b917b905e6f', '6fb0eff124']
