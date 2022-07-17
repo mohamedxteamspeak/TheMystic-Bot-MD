@@ -49,6 +49,8 @@ footer: `╭══〘 ✯✯✯✯✯✯✯✯ 〙═╮
 ┣ ඬ⃟ℹ️ _${usedPrefix}disable *autoread*_
 ┣ ඬ⃟ℹ️ _${usedPrefix}enable *audios*_
 ┣ ඬ⃟ℹ️ _${usedPrefix}disable *audios*_
+┣ ඬ⃟ℹ️ _${usedPrefix}enable *antiviewonce*_
+┣ ඬ⃟ℹ️ _${usedPrefix}disable *antiviewonce*_
 ┣ ඬ⃟ℹ️ _${usedPrefix}enable *autosticker*_
 ┣ ඬ⃟ℹ️ _${usedPrefix}disable *autosticker*_
 ┗━━━━━━━━━━━━━┛
@@ -127,6 +129,14 @@ global.dfail('admin', m, conn)
 throw false
 }}
 chat.antiLink2 = isEnable 
+break
+case 'antiviewonce':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.antiviewonce = isEnable 
 break
 case 'modohorny':
 if (m.isGroup) {
