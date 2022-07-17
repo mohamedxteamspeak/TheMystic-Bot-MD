@@ -272,8 +272,8 @@ export async function handler(chatUpdate) {
                     chat.antiLink = false
                 if (!('antiLink2' in chat))
                     chat.antiLink2 = false
-                if (!('viewonce' in chat))
-                    chat.viewonce = false
+                if (!('antiviewonce' in chat))
+                    chat.antiviewonce = false
                 if (!('antiToxic' in chat))
                     chat.antiToxic = false
                 if (!isNumber(chat.expired))
@@ -293,7 +293,7 @@ export async function handler(chatUpdate) {
                     audios: true,
                     antiLink: false,
                     antiLink2: false,
-                    viewonce: false,
+                    antiviewonce: false,
                     antiToxic: false,
                     expired: 0,
                 }
