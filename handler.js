@@ -272,8 +272,8 @@ export async function handler(chatUpdate) {
                     chat.antiLink = false
                 if (!('antiLink2' in chat))
                     chat.antiLink2 = false
-                if (!('viewonce' in chat))
-                    chat.viewonce = false
+                if (!('antiviewonce' in chat))
+                    chat.antiviewonce = false
                 if (!('antiToxic' in chat))
                     chat.antiToxic = false
                 if (!isNumber(chat.expired))
@@ -293,7 +293,7 @@ export async function handler(chatUpdate) {
                     audios: true,
                     antiLink: false,
                     antiLink2: false,
-                    viewonce: false,
+                    antiviewonce: false,
                     antiToxic: false,
                     expired: 0,
                 }
@@ -612,7 +612,12 @@ export async function handler(chatUpdate) {
             console.log(m, m.quoted, e)
         }
         if (opts['autoread'])
-            await this.chatRead(m.chat, m.isGroup ? m.sender : undefined, m.id || m.key.id).catch(() => { })
+            await this.readMessages([m.key])
+        
+        if (!m.fromMem && m.text.match(/(Bruno Sobrino|@5219996125657|bot|mystic|the mystic - bot|mystic - bot|themystic-bot)/gi)) {
+        let emot = pickRandom(["🎃", "❤", "😘", "😍", "💕", "😎", "🙌", "⭐", "👻", "🔥"])
+        this.sendMessage(m.chat, { react: { text: emot, key: m.key }})}
+        function pickRandom(list) { return list[Math.floor(Math.random() * list.length)]}
     }
 }
 
